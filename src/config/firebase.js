@@ -1,7 +1,4 @@
 import admin from "firebase-admin";
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
 
 const raw = process.env.FIREBASE_SERVICE_ACCOUNT;
 
