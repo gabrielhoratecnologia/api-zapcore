@@ -9,6 +9,9 @@ export async function handleUazapiWebhook(req, res) {
     const message = data?.message;
     const chat = data?.chat;
 
+    console.log("== PAYLOAD RECEBIDO DO UAZAPI ==");
+    console.log(JSON.stringify(req.body, null, 2));
+
     if (!message || !chat) {
       return res.status(200).send("ignored-invalid-payload");
     }
