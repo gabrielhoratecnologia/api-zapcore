@@ -1,5 +1,5 @@
+import "dotenv/config";
 import express from "express";
-import testRoutes from "./routes/test.routes.js";
 import conversationsRoutes from "./routes/conversations.routes.js";
 import messagesRoutes from "./routes/messages.routes.js";
 import { env } from "./config/env.js";
@@ -9,8 +9,6 @@ import webhooksRoutes from "./routes/webhooks.routes.js";
 const app = express();
 
 app.use(express.json());
-
-app.use("/test", testRoutes);
 
 app.use("/conversations", conversationsRoutes);
 
