@@ -10,13 +10,15 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/conversations", conversationsRoutes);
+//app.use("/conversations", conversationsRoutes);
 
-app.use("/messages", messagesRoutes);
+//app.use("/messages", messagesRoutes);
 
-app.use("/auth", authRoutes);
+//app.use("/auth", authRoutes);
 
-app.use("/webhooks", webhooksRoutes);
+//app.use("/webhooks", webhooksRoutes);
+
+app.get("/health", (req, res) => res.send("OK"));
 
 app.listen(env.port, () => {
   console.log(`🚀 API rodando na porta ${env.port}`);
