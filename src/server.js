@@ -13,7 +13,7 @@ process.on("unhandledRejection", console.error);
 
 console.log("PORT ENV:", process.env.PORT);
 
-app.use(express.json());
+//app.use(express.json());
 
 app.use("/conversations", conversationsRoutes);
 
